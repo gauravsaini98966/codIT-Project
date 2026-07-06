@@ -1,0 +1,254 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f7faf8;
+  color: #0b1710;
+  overflow-x: hidden;
+}
+
+.bg-grid {
+  background-image: linear-gradient(to right, rgba(14, 143, 82, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(14, 143, 82, 0.07) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+.glow-text {
+  text-shadow: 0 0 24px rgba(14, 143, 82, 0.25);
+}
+
+.scene {
+  perspective: 1600px;
+}
+
+.stack-wrap {
+  transform-style: preserve-3d;
+  transition: transform 0.15s ease-out;
+}
+
+.stack-card {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 230px;
+  height: 138px;
+  margin-left: -115px;
+  margin-top: -69px;
+  border-radius: 14px;
+  border: 1px solid rgba(57, 255, 140, 0.25);
+  background: linear-gradient(160deg, #0f1712 0%, #0a0f0c 100%);
+  box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.02) inset;
+  transform-style: preserve-3d;
+}
+
+@media (min-width: 640px) {
+  .stack-card {
+    width: 280px;
+    height: 168px;
+    margin-left: -140px;
+    margin-top: -84px;
+  }
+}
+
+.tag {
+  font-family: var(--font-jbmono), monospace;
+}
+
+.float-slow {
+  animation: floaty 7s ease-in-out infinite;
+}
+.float-slower {
+  animation: floaty 9s ease-in-out infinite;
+  animation-delay: -3s;
+}
+
+@keyframes floaty {
+  0%,
+  100% {
+    transform: translateZ(var(--z, 0px)) translateY(0px);
+  }
+  50% {
+    transform: translateZ(var(--z, 0px)) translateY(-10px);
+  }
+}
+
+.tilt-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transform-style: preserve-3d;
+}
+.course-card:hover .tilt-card {
+  box-shadow: 0 25px 50px -12px rgba(14, 143, 82, 0.15), 0 0 0 1px rgba(14, 143, 82, 0.3);
+}
+
+.code-window {
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease;
+}
+
+@media (min-width: 1024px) {
+  .code-window {
+    transform: rotateY(-14deg) rotateX(6deg) rotateZ(1deg);
+  }
+  .scene:hover .code-window {
+    transform: rotateY(-8deg) rotateX(3deg) rotateZ(0.5deg);
+  }
+}
+
+.clip-corner {
+  clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 0 100%);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f7faf8;
+}
+::-webkit-scrollbar-thumb {
+  background: #b9d6c4;
+  border-radius: 10px;
+}
+
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 1px;
+  background: #0e8f52;
+  transition: width 0.25s ease;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.navy-link {
+  position: relative;
+  padding-bottom: 4px;
+}
+.navy-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #39ff8c, #38bdf8);
+  transition: width 0.25s ease;
+}
+.navy-link:hover::after {
+  width: 100%;
+}
+
+.marquee-track {
+  animation: marquee 22s linear infinite;
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.btn-glow {
+  box-shadow: 0 0 0 rgba(14, 143, 82, 0);
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+.btn-glow:hover {
+  box-shadow: 0 0 28px rgba(14, 143, 82, 0.35);
+  transform: translateY(-2px);
+}
+
+.num {
+  font-family: var(--font-jbmono), monospace;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .float-slow,
+  .float-slower,
+  .marquee-track {
+    animation: none !important;
+  }
+}
+
+/* ---------- Responsive / 3D hardening added for mobile, tablet & laptop ---------- */
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Disable mouse-tracking tilt on touch devices — there's no pointer to track,
+   and a stuck 3D transform looks broken on phones/tablets. */
+@media (hover: none) and (pointer: coarse) {
+  .tilt-card,
+  .code-window,
+  .stack-wrap {
+    transform: none !important;
+  }
+}
+
+/* Page hero used by inner pages (About, Contact, etc.) for a consistent,
+   responsive 3D-tinted header band. */
+.page-hero {
+  position: relative;
+  overflow: hidden;
+  padding-top: 7.5rem;
+  padding-bottom: 3rem;
+}
+@media (min-width: 640px) {
+  .page-hero {
+    padding-top: 9rem;
+    padding-bottom: 4rem;
+  }
+}
+@media (min-width: 1024px) {
+  .page-hero {
+    padding-top: 11rem;
+    padding-bottom: 5rem;
+  }
+}
+
+/* Generic 3D tilt card used across About/Contact pages */
+.card-3d {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+.card-3d:hover {
+  transform: translateY(-6px) rotateX(4deg) rotateY(-4deg);
+  box-shadow: 0 30px 60px -20px rgba(14, 143, 82, 0.25), 0 0 0 1px rgba(14, 143, 82, 0.25);
+}
+@media (hover: none) and (pointer: coarse) {
+  .card-3d:hover {
+    transform: none;
+  }
+}
+
+/* Ensure grids never force horizontal scroll on very small phones */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
