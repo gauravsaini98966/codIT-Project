@@ -3,20 +3,77 @@
 import { useRef } from "react";
 
 const techLogos = [
+  "HTML5",
+  "CSS3",
+  "JavaScript",
+  "TypeScript",
   "React",
   "Next.js",
-  "Tailwind",
+  "Redux Toolkit",
+  "Tailwind CSS",
+  "Bootstrap",
+  "Material UI",
+  "Shadcn UI",
   "Node.js",
-  "Express",
+  "Express.js",
   "MongoDB",
-  "Figma",
-  "React Native",
-  "TypeScript",
+  "Mongoose",
   "PostgreSQL",
+  "MySQL",
+  "REST API",
+  "GraphQL",
+  "JWT",
+  "Socket.io",
+  "Firebase",
+  "Cloudinary",
+  "Multer",
+  "React Native",
+  "Expo",
+  "Android",
+  "iOS",
+  "Figma",
+  "Adobe XD",
+  "Photoshop",
+  "Illustrator",
+  "Wireframing",
+  "Prototyping",
+  "Design Systems",
+  "Responsive Design",
+  "Matplotlib",
+  "Seaborn",
+  "Scikit-learn",
+  "TensorFlow",
+  "PyTorch",
+  "Jupyter Notebook",
+  "Machine Learning",
+  "Deep Learning",
+  "Generative AI",
+  "OpenAI API",
+  "LangChain",
+  "Prompt Engineering",
+  "SQL",
+  "Power BI",
+  "Git",
+  "GitHub",
+  "Postman",
+  "Vercel",
+  "Render",
+  "Docker",
+  "AWS",
+  "Linux",
   "SEO",
+  "Technical SEO",
+  "Google Analytics",
+  "Google Search Console",
   "Google Ads",
+  "Meta Ads",
+  "Content Marketing",
+  "Email Marketing",
+  "Keyword Research",
+  "Local SEO",
+  "WordPress",
+  "Canva",
 ];
-
 export default function Hero() {
   const sceneRef = useRef<HTMLDivElement>(null);
   const wrapRef = useRef<HTMLDivElement>(null);
@@ -43,20 +100,14 @@ export default function Hero() {
 
       <div className="max-w-7xl mx-auto px-6 lg:px-10 relative grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         <div>
-          <div className="inline-flex items-center gap-2 border border-line rounded-full px-4 py-1.5 mb-7 font-mono text-xs text-green">
-            <span className="w-1.5 h-1.5 rounded-full bg-green animate-pulse" />
-            cohort enrolling — batch #14
-          </div>
+
           <h1 className="font-display text-5xl sm:text-6xl lg:text-[68px] leading-[1.04] tracking-tight text-bone">
-            Ship real products.
+            Build real skills.
             <br />
-            Not just <span className="text-green glow-text">tutorials.</span>
+            Not just <span className="text-green glow-text">certificates.</span>
           </h1>
           <p className="mt-7 text-lg text-muted max-w-lg leading-relaxed">
-            Intitude is a project-first coding academy. Learn Front End,
-            Backend, Full Stack, UI/UX, Mobile Development and Digital
-            Marketing the way product teams actually build — with mentors,
-            code reviews, and a portfolio to show for it.
+            CodIT is a project-first coding academy where you learn by building real-world applications. Master Frontend, Backend, Full Stack Development, UI/UX Design, Mobile App Development, Data Science, SEO, and Digital Marketing with expert mentors, code reviews, hands-on projects, and an industry-ready portfolio that helps you stand out.
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <a
@@ -72,7 +123,7 @@ export default function Hero() {
               Explore Courses
             </a>
           </div>
-          <div className="mt-10 sm:mt-14 flex flex-wrap items-center gap-6 sm:gap-10 font-mono text-xs text-muted">
+          {/* <div className="mt-10 sm:mt-14 flex flex-wrap items-center gap-6 sm:gap-10 font-mono text-xs text-muted">
             <div>
               <span className="text-xl sm:text-2xl text-bone font-display block">
                 4.2k+
@@ -91,7 +142,7 @@ export default function Hero() {
               <span className="text-xl sm:text-2xl text-bone font-display block">6</span>
               career tracks
             </div>
-          </div>
+          </div> */}
         </div>
 
         <div

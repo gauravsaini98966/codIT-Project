@@ -2,11 +2,12 @@ import Link from "next/link";
 
 const courseLinks = [
   "Front End Development",
-  "UI/UX Designing",
   "Backend Development",
-  "Mobile App Development",
   "Full Stack Development",
-  "Digital Marketing",
+  "UI/UX Designing",
+  "Mobile App Development",
+  "SEO & Growth Marketing",
+  "Data Science & AI",
 ];
 
 export default function Footer() {
@@ -16,7 +17,7 @@ export default function Footer() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-10 mb-14">
           <div className="sm:col-span-2 lg:col-span-1">
             <span className="font-display text-2xl text-bone">
-              Int<span className="text-green">itude</span>
+              Cod<span className="text-green">IT</span>
             </span>
             <p className="text-sm text-muted mt-4 leading-relaxed">
               A project-first coding academy for people who want to build, not
@@ -89,7 +90,7 @@ export default function Footer() {
               </li>
               <li>
                 <a href="tel:+918570854537" className="hover:text-bone transition-colors">
-                  +91 85708 54537
+                  +91 99922-55388
                 </a>
               </li>
               <li className="flex gap-4 pt-2">
@@ -108,7 +109,7 @@ export default function Footer() {
         </div>
         <div className="pt-8 border-t border-line flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-muted font-mono">
           <span>© 2026 Intitude. All rights reserved.</span>
-          <span>Built with Next.js · Tailwind · Node · Express</span>
+
         </div>
       </div>
     </footer>

@@ -20,8 +20,8 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto rounded-2xl border border-white/10 bg-gradient-to-r from-[#0A1330] via-[#15305F] to-[#0A1330] shadow-xl shadow-black/10 backdrop-blur-md">
         <div className="px-4 sm:px-6 lg:px-8 h-16 sm:h-[72px] flex items-center justify-between">
           <Link href="/#top" className="flex items-center gap-2 shrink-0">
-            <span className="font-display text-lg sm:text-xl tracking-tight text-white">
-              Int<span className="text-green">itude</span>
+            <span className="font-display text-lg sm:text-xl tracking-tight text-white font-medium">
+              Code<span className="text-green">IT</span>
             </span>
           </Link>
 

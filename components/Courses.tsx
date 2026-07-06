@@ -16,9 +16,9 @@ const courses: Course[] = [
   {
     num: "01",
     title: "Front End Development",
-    desc: "Build fast, accessible interfaces with React & Next.js. Master component architecture, state, and responsive layouts.",
-    tags: ["React", "Next.js", "Tailwind"],
-    weeks: "12 weeks",
+    desc: "Build responsive, high-performance websites using React, Next.js, and Tailwind CSS.",
+    tags: ["React", "Next.js", "Tailwind CSS"],
+    weeks: "12 Weeks",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
         <path
@@ -33,10 +33,26 @@ const courses: Course[] = [
   },
   {
     num: "02",
-    title: "UI/UX Designing",
-    desc: "Design systems that convert. Wireframing, prototyping, usability testing, and a Figma workflow built for handoff.",
-    tags: ["Figma", "Design Systems", "Prototyping"],
-    weeks: "10 weeks",
+    title: "Backend Development",
+    desc: "Build scalable APIs, authentication, and databases using Node.js and Express.",
+    tags: ["Node.js", "Express.js", "MongoDB"],
+    weeks: "12 Weeks",
+    icon: (
+
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+        <rect x="3" y="4" width="18" height="6" rx="1.5" stroke="#0E8F52" strokeWidth="1.8" />
+        <rect x="3" y="14" width="18" height="6" rx="1.5" stroke="#0E8F52" strokeWidth="1.8" />
+        <circle cx="7" cy="7" r="0.8" fill="#0E8F52" />
+        <circle cx="7" cy="17" r="0.8" fill="#0E8F52" />
+      </svg>
+    ),
+  },
+  {
+    num: "03",
+    title: "Full Stack Development",
+    desc: "Master frontend, backend, databases, deployment, and real-world MERN projects.",
+    tags: ["MERN", "TypeScript", "Next.js"],
+    weeks: "24 Weeks",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
         <circle cx="12" cy="12" r="3" stroke="#0E8F52" strokeWidth="1.8" />
@@ -47,29 +63,15 @@ const courses: Course[] = [
           strokeLinecap="round"
         />
       </svg>
-    ),
-  },
-  {
-    num: "03",
-    title: "Backend Development",
-    desc: "APIs, auth, and databases done right. Build secure, scalable services with Node, Express, and SQL/NoSQL.",
-    tags: ["Node.js", "Express", "MongoDB"],
-    weeks: "12 weeks",
-    icon: (
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-        <rect x="3" y="4" width="18" height="6" rx="1.5" stroke="#0E8F52" strokeWidth="1.8" />
-        <rect x="3" y="14" width="18" height="6" rx="1.5" stroke="#0E8F52" strokeWidth="1.8" />
-        <circle cx="7" cy="7" r="0.8" fill="#0E8F52" />
-        <circle cx="7" cy="17" r="0.8" fill="#0E8F52" />
-      </svg>
+
     ),
   },
   {
     num: "04",
-    title: "Mobile App Development",
-    desc: "Ship cross-platform apps with React Native. Navigation, native APIs, push notifications, and app store deploys.",
-    tags: ["React Native", "Expo", "Firebase"],
-    weeks: "14 weeks",
+    title: "UI/UX Designing",
+    desc: "Create beautiful user experiences using Figma, wireframes, and prototypes.",
+    tags: ["Figma", "Wireframing", "Prototype"],
+    weeks: "10 Weeks",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
         <rect x="7" y="2.5" width="10" height="19" rx="2" stroke="#0E8F52" strokeWidth="1.8" />
@@ -79,10 +81,10 @@ const courses: Course[] = [
   },
   {
     num: "05",
-    title: "Full Stack Development",
-    desc: "The complete path: front end to backend to deployment. One curriculum, five real products, one strong portfolio.",
-    tags: ["MERN", "Next.js", "TypeScript"],
-    weeks: "24 weeks",
+    title: "Mobile App Development",
+    desc: "Develop Android & iOS applications using React Native and Firebase.",
+    tags: ["React Native", "Expo", "Firebase"],
+    weeks: "14 Weeks",
     featured: true,
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
@@ -98,10 +100,28 @@ const courses: Course[] = [
   },
   {
     num: "06",
-    title: "Digital Marketing",
-    desc: "SEO, paid ads, and social media strategy. Learn to grow an audience and turn traffic into real, measurable results.",
-    tags: ["SEO", "Google Ads", "Social Media"],
-    weeks: "8 weeks",
+    title: "SEO & Growth Marketing",
+    desc: "Learn SEO, Google Ads, Analytics, and digital growth strategies.",
+    tags: ["SEO", "Google Ads", "Analytics"],
+    weeks: "8 Weeks",
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+        <path
+          d="M3 17l6-6 4 4 8-8M21 7v6M21 7h-6"
+          stroke="#0E8F52"
+          strokeWidth="1.8"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    ),
+  },
+  {
+    num: "07",
+    title: "Data Science & AI",
+    desc: "Learn Python, Machine Learning, AI models, and data visualization.",
+    tags: ["Python", "Machine Learning", "OpenAI"],
+    weeks: "16 Weeks",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
         <path
@@ -142,11 +162,10 @@ function CourseCard({ course }: { course: Course }) {
     >
       <div
         ref={innerRef}
-        className={`tilt-card clip-corner rounded-2xl p-6 sm:p-7 h-full flex flex-col relative overflow-hidden border ${
-          course.featured
-            ? "bg-gradient-to-br from-green-dim/60 to-surface border-green/40"
-            : "bg-surface border-line"
-        }`}
+        className={`tilt-card clip-corner rounded-2xl p-6 sm:p-7 h-full flex flex-col relative overflow-hidden border ${course.featured
+          ? "bg-gradient-to-br from-green-dim/60 to-surface border-green/40"
+          : "bg-surface border-line"
+          }`}
       >
         {course.featured && (
           <span className="absolute top-5 right-5 font-mono text-[10px] bg-green text-ink px-2.5 py-1 rounded-full font-semibold">
@@ -158,18 +177,16 @@ function CourseCard({ course }: { course: Course }) {
             {course.num}
           </span>
           <div
-            className={`w-11 h-11 rounded-lg flex items-center justify-center ${
-              course.featured ? "bg-green" : "bg-green-dim"
-            }`}
+            className={`w-11 h-11 rounded-lg flex items-center justify-center ${course.featured ? "bg-green" : "bg-green-dim"
+              }`}
           >
             {course.icon}
           </div>
         </div>
         <h3 className="font-display text-xl text-bone mb-2">{course.title}</h3>
         <p
-          className={`text-sm leading-relaxed mb-6 ${
-            course.featured ? "text-bone/70" : "text-muted"
-          }`}
+          className={`text-sm leading-relaxed mb-6 ${course.featured ? "text-bone/70" : "text-muted"
+            }`}
         >
           {course.desc}
         </p>
@@ -177,25 +194,22 @@ function CourseCard({ course }: { course: Course }) {
           {course.tags.map((tag) => (
             <span
               key={tag}
-              className={`font-mono text-[10px] rounded-full px-2.5 py-1 border ${
-                course.featured ? "border-green/40 text-bone/80" : "border-line text-bone/70"
-              }`}
+              className={`font-mono text-[10px] rounded-full px-2.5 py-1 border ${course.featured ? "border-green/40 text-bone/80" : "border-line text-bone/70"
+                }`}
             >
               {tag}
             </span>
           ))}
         </div>
         <div
-          className={`mt-auto flex items-center justify-between pt-5 border-t text-sm ${
-            course.featured ? "border-green/30" : "border-line"
-          }`}
+          className={`mt-auto flex items-center justify-between pt-5 border-t text-sm ${course.featured ? "border-green/30" : "border-line"
+            }`}
         >
           <span className={course.featured ? "text-bone/70" : "text-muted"}>{course.weeks}</span>
           <a
             href="#enroll"
-            className={`flex items-center gap-1 ${
-              course.featured ? "text-green font-semibold" : "text-green font-medium"
-            }`}
+            className={`flex items-center gap-1 ${course.featured ? "text-green font-semibold" : "text-green font-medium"
+              }`}
           >
             Enroll <span>→</span>
           </a>
@@ -212,16 +226,16 @@ export default function Courses() {
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-16">
           <div>
             <span className="font-mono text-xs text-green uppercase tracking-widest">
-              Career Tracks
+              Choose Your Path
             </span>
             <h2 className="font-display text-4xl sm:text-5xl text-bone mt-3 tracking-tight">
-              Six tracks. One goal —<br className="hidden sm:block" /> a job-ready
-              portfolio.
+              Seven tracks. One goal —<br className="hidden sm:block" /> Build a Career in Tech.
+
+
             </h2>
           </div>
           <p className="text-muted max-w-sm leading-relaxed">
-            Every course is mentor-led, project-based, and ends with a capstone
-            you actually ship — not a certificate that sits in a folder.
+            Every program at CodIT is mentor-led, project-based, and designed to help you build real-world applications, gain practical experience, and graduate with a portfolio that gets you hired.
           </p>
         </div>
 
