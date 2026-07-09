@@ -108,7 +108,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="pt-8 border-t border-line flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-muted font-mono">
-          <span>© 2026 Intitude. All rights reserved.</span>
+          <span>© 2026 CodIT. All rights reserved.</span>
 
         </div>
       </div>

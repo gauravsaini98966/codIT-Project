@@ -13,18 +13,18 @@ export const metadata: Metadata = {
 const whyPoints = [
   {
     n: "1",
-    title: "Experienced, hands-on team",
-    desc: "Every mentor has shipped production code — you learn from people who build for a living, not just teach theory.",
+    title: "Industry Expert Mentors",
+    desc: "Learn from experienced professionals who bring real-world industry knowledge and guide you through practical, project-based training.",
   },
   {
     n: "2",
-    title: "Tailored solutions & tracks",
-    desc: "Front End, Backend, Full Stack, UI/UX, Mobile and Digital Marketing — each track is built around what employers actually hire for.",
+    title: "Career-Focused Courses",
+    desc: "Choose from Front End, Backend, Full Stack, UI/UX, Mobile App Development, SEO & Growth Marketing, and Data Science & AI programs.",
   },
   {
     n: "3",
-    title: "Commitment to excellence",
-    desc: "From code reviews to capstone launches, we hold every project to the same bar as a real client deliverable.",
+    title: "Practical Learning Experience",
+    desc: "Build live projects, strengthen your portfolio, and prepare for interviews with hands-on training and dedicated placement support.",
   },
 ];
 
@@ -45,12 +45,12 @@ export default function AboutPage() {
             Who We Are
           </h1>
           <p className="mt-6 text-base sm:text-lg text-muted max-w-2xl mx-auto leading-relaxed">
-            Intitude is a leading IT training company that specializes in
-            preparing developers and designers with real, cutting-edge
-            skills. With a team of highly skilled professionals, we teach
-            across software development, web design, mobile app development
-            and cloud solutions — building tailored learning paths around the
-            unique goals of every student.
+            CodIT is a leading IT training institute dedicated to preparing students for successful careers in the technology industry. We specialize in delivering practical, industry-focused training that equips learners with the skills employers are looking for.
+
+            Our experienced mentors provide hands-on training in **Front-End Development, Backend Development, Full Stack Development, UI/UX Designing, Mobile App Development, SEO & Growth Marketing, and Data Science & AI**. Every course is designed around real-world projects, the latest technologies, and current industry practices.
+
+            Whether you're a beginner starting your tech journey or a professional looking to upgrade your skills, our personalized learning approach, project-based curriculum, and placement support help you gain confidence, build an impressive portfolio, and become job-ready.
+
           </p>
         </div>
       </section>
@@ -66,11 +66,8 @@ export default function AboutPage() {
               Reliable, innovative training — built around you.
             </h2>
             <p className="text-muted leading-relaxed mb-8">
-              Choose Intitude for reliable and innovative IT training. With
-              our experienced team and commitment to excellence, we deliver
-              customized software development, web design, mobile app
-              development and cloud-solutions courses. Let us help you
-              harness the power of technology to drive your career forward.
+              Choose CodIT to gain industry-ready skills through practical, hands-on learning. Our expert mentors provide training in Full Stack Development, UI/UX Design, Mobile App Development, SEO & Growth Marketing, and Data Science & AI. Every course includes real-world projects and personalized guidance to build your confidence. We focus on helping students create strong portfolios and prepare for technical interviews. Start your journey with CodIT and build a successful career in technology.
+
             </p>
             <div className="space-y-7">
               {whyPoints.map((p) => (
@@ -98,23 +95,26 @@ export default function AboutPage() {
               <pre className="font-mono text-[12px] sm:text-[13px] leading-relaxed p-5 sm:p-6 overflow-x-auto">
                 <code>
                   <span className="text-muted">01</span>{"  "}
-                  <span className="text-[#c792ea]">const</span> intitude ={" "}
-                  {"{"}
+                  <span className="text-[#c792ea]">const</span> codIT = {"{"}
                   {"\n"}
                   <span className="text-muted">02</span>{"    "}
-                  founded: <span className="text-[#f78c6c]">2019</span>,{"\n"}
+                  founded: <span className="text-[#f78c6c]">2026</span>,{"\n"}
                   <span className="text-muted">03</span>{"    "}
-                  mentors: <span className="text-[#f78c6c]">9</span>,{"\n"}
+                  courses: <span className="text-[#f78c6c]">7</span>,{"\n"}
                   <span className="text-muted">04</span>{"    "}
-                  tracks: <span className="text-green">&apos;6 career paths&apos;</span>,{"\n"}
+                  mode: <span className="text-green">&apos;Online & Offline&apos;</span>,{"\n"}
                   <span className="text-muted">05</span>{"    "}
-                  mission: <span className="text-green">&apos;ship real products&apos;</span>,{"\n"}
-                  <span className="text-muted">06</span>{"  "}
-                  {"}"};{"\n"}
-                  <span className="text-muted">07</span>
-                  {"\n"}
+                  focus: <span className="text-green">&apos;Practical Learning&apos;</span>,{"\n"}
+                  <span className="text-muted">06</span>{"    "}
+                  placement: <span className="text-green">&apos;Career Support&apos;</span>,{"\n"}
+                  <span className="text-muted">07</span>{"    "}
+                  mission: <span className="text-green">&apos;Build Job-Ready Professionals&apos;</span>,{"\n"}
                   <span className="text-muted">08</span>{"  "}
-                  <span className="text-[#82aaff]">export default</span> intitude;
+                  {"}"};{"\n"}
+                  <span className="text-muted">09</span>
+                  {"\n"}
+                  <span className="text-muted">10</span>{"  "}
+                  <span className="text-[#82aaff]">export default</span> codIT;
                 </code>
               </pre>
             </div>

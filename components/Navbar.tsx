@@ -21,7 +21,7 @@ export default function Navbar() {
         <div className="px-4 sm:px-6 lg:px-8 h-16 sm:h-[72px] flex items-center justify-between">
           <Link href="/#top" className="flex items-center gap-2 shrink-0">
             <span className="font-display text-lg sm:text-xl tracking-tight text-white font-medium">
-              Code<span className="text-green">IT</span>
+              Cod<span className="text-green">IT</span>
             </span>
           </Link>
 

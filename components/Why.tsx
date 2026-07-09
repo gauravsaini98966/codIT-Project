@@ -22,7 +22,7 @@ export default function Why() {
       <div className="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         <div>
           <span className="font-mono text-xs text-green uppercase tracking-widest">
-            Why Intitude
+            Why Cod<span className="text-green">IT</span>
           </span>
           <h2 className="font-display text-4xl sm:text-5xl text-bone mt-3 mb-8 tracking-tight leading-tight">
             Built like a dev team, not a classroom.

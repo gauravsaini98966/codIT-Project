@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, Inter, JetBrains_Mono } from "next/font/google";
+import ChatBot from "@/components/ChatBot";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -33,7 +34,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${spaceGrotesk.variable} ${inter.variable} ${jbMono.variable}`}>
-      <body className="font-body bg-ink">{children}</body>
+      <body className="font-body bg-ink">
+        {children}
+        {/* <ChatBot /> */}
+      </body>
     </html>
   );
 }
