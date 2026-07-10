@@ -18,7 +18,7 @@ export default function ChatBot() {
     {
       id: 0,
       from: "bot",
-      text: "Hi 👋 I'm the Intitude assistant. Ask me anything about our courses or how to get in touch!",
+      text: "Hi 👋 I'm the CodIT assistant. Ask me anything about our courses or how to get in touch!",
     },
   ]);
   const [input, setInput] = useState("");
@@ -80,7 +80,7 @@ export default function ChatBot() {
                 <span className="w-2 h-2 rounded-full bg-green shadow-[0_0_10px_2px_rgba(57,255,140,0.7)]" />
               </div>
               <div>
-                <p className="font-display text-sm text-white leading-tight">Intitude Assistant</p>
+                <p className="font-display text-sm text-white leading-tight">CodIT Assistant</p>
                 <p className="font-mono text-[10px] text-white/50">courses · contact · faq</p>
               </div>
             </div>
@@ -100,11 +100,10 @@ export default function ChatBot() {
             {messages.map((m) => (
               <div
                 key={m.id}
-                className={`max-w-[85%] text-sm leading-relaxed rounded-2xl px-4 py-2.5 ${
-                  m.from === "bot"
-                    ? "self-start bg-green-dim/60 text-bone rounded-tl-sm"
-                    : "self-end bg-green text-ink rounded-tr-sm"
-                }`}
+                className={`max-w-[85%] text-sm leading-relaxed rounded-2xl px-4 py-2.5 ${m.from === "bot"
+                  ? "self-start bg-green-dim/60 text-bone rounded-tl-sm"
+                  : "self-end bg-green text-ink rounded-tr-sm"
+                  }`}
               >
                 {m.text}
               </div>

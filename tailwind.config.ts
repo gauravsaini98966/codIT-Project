@@ -6,7 +6,11 @@ const config: Config = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+
     extend: {
+      screens: {
+        xs: "400px",
+      },
       colors: {
         ink: "#F7FAF8",
         surface: "#FFFFFF",

@@ -76,7 +76,7 @@ const enrollments = [];
 const messages = [];
 
 app.get("/api/health", (req, res) => {
-  res.json({ status: "ok", service: "Intitude API", mailer: transporter ? "connected" : "not configured" });
+  res.json({ status: "ok", service: "CodIT API", mailer: transporter ? "connected" : "not configured" });
 });
 
 app.get("/api/courses", (req, res) => {
@@ -109,7 +109,7 @@ app.post("/api/enroll", async (req, res) => {
     await sendMail({
       subject: `🎓 New demo request${course ? ` — ${course.title}` : ""}`,
       replyTo: email,
-      text: `New demo request from the Intitude website.\n\nEmail: ${email}\nCourse: ${course ? course.title : "Not specified"}\nSubmitted: ${entry.createdAt}`,
+      text: `New demo request from the CodIT website.\n\nEmail: ${email}\nCourse: ${course ? course.title : "Not specified"}\nSubmitted: ${entry.createdAt}`,
       html: `
         <div style="font-family:sans-serif;line-height:1.6">
           <h2 style="color:#0E8F52;margin-bottom:4px;">New Demo Request</h2>
@@ -149,7 +149,7 @@ app.post("/api/contact", async (req, res) => {
     const { delivered } = await sendMail({
       subject: `📩 New contact message from ${name}`,
       replyTo: email,
-      text: `New message from the Intitude contact form.\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\n\nMessage:\n${message}\n\nSubmitted: ${entry.createdAt}`,
+      text: `New message from the CodIT contact form.\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\n\nMessage:\n${message}\n\nSubmitted: ${entry.createdAt}`,
       html: `
         <div style="font-family:sans-serif;line-height:1.6">
           <h2 style="color:#0E8F52;margin-bottom:4px;">New Contact Message</h2>
@@ -163,7 +163,7 @@ app.post("/api/contact", async (req, res) => {
     });
 
     return res.status(201).json({
-      message: delivered ? "Message sent to Intitude's inbox." : "Message received (email not configured).",
+      message: delivered ? "Message sent to CodIT's inbox." : "Message received (email not configured).",
       entry,
     });
   } catch (err) {
@@ -176,5 +176,5 @@ app.post("/api/contact", async (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Intitude API running on http://localhost:${PORT}`);
+  console.log(`CodIT API running on http://localhost:${PORT}`);
 });

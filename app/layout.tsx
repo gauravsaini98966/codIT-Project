@@ -22,7 +22,7 @@ const jbMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Intitude — Learn to Build the Web",
+  title: "CodIT — Learn to Build the Web",
   description:
     "CodIT is a leading coding academy offering industry-focused, project-based training in Front-End Development, Back-End Development, Full Stack Development, UI/UX Design, Mobile App Development, and Digital Marketing. Our mentor-led programs are designed to equip students with practical, job-ready skills through hands-on projects, real-world assignments, and personalized guidance from experienced industry professionals. Whether you're a beginner or looking to advance your career, CodIT provides the knowledge, experience, and support needed to succeed in today's competitive tech industry..",
 };

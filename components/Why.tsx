@@ -1,3 +1,4 @@
+
 const points = [
   {
     n: "1",
@@ -18,40 +19,40 @@ const points = [
 
 export default function Why() {
   return (
-    <section id="why" className="relative py-16 sm:py-20 lg:py-28 border-t border-line bg-surface/40">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-        <div>
+    <section id="why" className="relative py-16 sm:py-20 lg:py-28 border-t border-line bg-surface/40 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="min-w-0">
           <span className="font-mono text-xs text-green uppercase tracking-widest">
             Why Cod<span className="text-green">IT</span>
           </span>
-          <h2 className="font-display text-4xl sm:text-5xl text-bone mt-3 mb-8 tracking-tight leading-tight">
+          <h2 className="font-display text-4xl sm:text-5xl text-bone mt-3 mb-8 tracking-tight leading-tight break-words">
             Built like a dev team, not a classroom.
           </h2>
           <div className="space-y-7">
             {points.map((p) => (
-              <div key={p.n} className="flex gap-5">
+              <div key={p.n} className="flex gap-5 min-w-0">
                 <div className="w-10 h-10 shrink-0 rounded-lg border border-green/30 flex items-center justify-center font-mono text-green text-sm">
                   {p.n}
                 </div>
-                <div>
-                  <h4 className="font-display text-lg text-bone mb-1">{p.title}</h4>
-                  <p className="text-muted text-sm leading-relaxed">{p.desc}</p>
+                <div className="min-w-0">
+                  <h4 className="font-display text-lg text-bone mb-1 break-words">{p.title}</h4>
+                  <p className="text-muted text-sm leading-relaxed break-words">{p.desc}</p>
                 </div>
               </div>
             ))}
           </div>
         </div>
 
-        <div className="scene">
-          <div className="code-window bg-[#0A0F0C] border border-line rounded-xl overflow-hidden shadow-2xl">
+        <div className="scene w-full min-w-0">
+          <div className="code-window bg-[#0A0F0C] border border-line rounded-xl overflow-hidden shadow-2xl w-full max-w-full">
             <div className="flex items-center gap-2 px-4 py-3 border-b border-line bg-surface2">
-              <span className="w-2.5 h-2.5 rounded-full bg-[#FF5F56]" />
-              <span className="w-2.5 h-2.5 rounded-full bg-[#FFBD2E]" />
-              <span className="w-2.5 h-2.5 rounded-full bg-[#27C93F]" />
-              <span className="ml-3 font-mono text-xs text-muted">server.js</span>
+              <span className="w-2.5 h-2.5 rounded-full bg-[#FF5F56] shrink-0" />
+              <span className="w-2.5 h-2.5 rounded-full bg-[#FFBD2E] shrink-0" />
+              <span className="w-2.5 h-2.5 rounded-full bg-[#27C93F] shrink-0" />
+              <span className="ml-3 font-mono text-xs text-muted truncate">server.js</span>
             </div>
-            <pre className="font-mono text-[13px] leading-relaxed p-6 overflow-x-auto">
-              <code>
+            <pre className="font-mono text-[13px] leading-relaxed p-6 overflow-x-auto max-w-full">
+              <code className="whitespace-pre">
                 <span className="text-muted">01</span>{"  "}
                 <span className="text-[#c792ea]">import</span> express{" "}
                 <span className="text-[#c792ea]">from</span>{" "}
@@ -77,7 +78,7 @@ export default function Why() {
                 {"\n"}
                 <span className="text-muted">09</span>{"    "}
                 console.<span className="text-[#82aaff]">log</span>(
-                <span className="text-green">&apos;Intitude server running ✓&apos;</span>);{"\n"}
+                <span className="text-green">&apos;CodIT server running ✓&apos;</span>);{"\n"}
                 <span className="text-muted">10</span>{"  "}
                 {"}"});
               </code>

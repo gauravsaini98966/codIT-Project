@@ -4,9 +4,9 @@ import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact Us — Intitude",
+  title: "Contact Us — CodIT",
   description:
-    "Get in touch with Intitude — ask about tracks, batches, or book a free demo class with a mentor.",
+    "Get in touch with CodIT — ask about tracks, batches, or book a free demo class with a mentor.",
 };
 
 const info = [
@@ -79,39 +79,47 @@ export default function ContactPage() {
       <section className="relative py-16 sm:py-20 lg:py-24 border-b border-line">
         <div className="max-w-6xl mx-auto px-6 lg:px-10 grid lg:grid-cols-5 gap-10 lg:gap-14">
           <div className="lg:col-span-3">
+
             <ContactForm />
           </div>
 
-          <div className="lg:col-span-2 flex flex-col gap-4 sm:gap-5">
+
+          <div className="lg:col-span-2 flex flex-col gap-2 xs:gap-3 sm:gap-4 lg:gap-5">
             {info.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
-                className="card-3d flex items-center gap-4 rounded-2xl border border-line bg-surface p-5 sm:p-6"
+                className="card-3d flex items-center gap-2.5 rounded-xl border border-line bg-surface p-3 xs:gap-3 xs:rounded-2xl xs:p-4 sm:gap-4 sm:p-5 lg:p-6"
               >
-                <div className="w-11 h-11 shrink-0 rounded-lg bg-green-dim flex items-center justify-center">
+                <div className="w-9 h-9 shrink-0 rounded-lg bg-green-dim flex items-center justify-center xs:w-10 xs:h-10 sm:w-11 sm:h-11">
                   {item.icon}
                 </div>
-                <div>
-                  <p className="font-mono text-[11px] text-green uppercase tracking-widest">
+                <div className="min-w-0">
+                  <p className="font-mono text-[9px] text-green uppercase tracking-widest xs:text-[10px] sm:text-[11px]">
                     {item.label}
                   </p>
-                  <p className="text-bone font-medium mt-0.5 break-words">{item.value}</p>
+                  <p className="text-bone font-medium text-xs mt-0.5 break-words xs:text-sm sm:text-base">
+                    {item.value}
+                  </p>
                 </div>
               </a>
             ))}
 
-            <div className="card-3d rounded-2xl border border-line bg-[#0A0F0C] p-5 sm:p-6">
-              <p className="font-mono text-[11px] text-green uppercase tracking-widest mb-2">
+            <div className="card-3d rounded-xl border border-line bg-[#0A0F0C] p-3 xs:rounded-2xl xs:p-4 sm:p-5 lg:p-6">
+              <p className="font-mono text-[9px] text-green uppercase tracking-widest mb-1.5 xs:text-[10px] xs:mb-2 sm:text-[11px]">
                 Office hours
               </p>
-              <p className="text-white/80 text-sm leading-relaxed">
+              <p className="text-white/80 text-[11px] leading-relaxed xs:text-xs sm:text-sm">
                 Monday – Saturday, 10:00 AM – 7:00 PM IST.
                 <br />
                 Mentor Q&amp;A sessions run weekly for every active batch.
               </p>
             </div>
           </div>
+
+
+
+
         </div>
       </section>
 

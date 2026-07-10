@@ -5,9 +5,9 @@ import Team from "@/components/Team";
 import FAQ from "@/components/FAQ";
 
 export const metadata: Metadata = {
-  title: "About Us — Intitude",
+  title: "About Us — CodIT",
   description:
-    "Intitude is a project-first coding academy building job-ready developers, designers and marketers through mentor-led, real-world training.",
+    "CodIT is a project-first coding academy building job-ready developers, designers and marketers through mentor-led, real-world training.",
 };
 
 const whyPoints = [
@@ -56,44 +56,44 @@ export default function AboutPage() {
       </section>
 
       {/* ---------- Why Choose Us ---------- */}
-      <section className="relative py-16 sm:py-20 lg:py-28 border-b border-line bg-surface/40">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          <div>
+
+      <section className="relative py-16 sm:py-20 lg:py-28 border-b border-line bg-surface/40 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div className="min-w-0">
             <span className="font-mono text-xs text-green uppercase tracking-widest">
               Why Choose Us
             </span>
-            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-bone mt-3 mb-8 tracking-tight leading-tight">
+            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-bone mt-3 mb-8 tracking-tight leading-tight break-words">
               Reliable, innovative training — built around you.
             </h2>
-            <p className="text-muted leading-relaxed mb-8">
+            <p className="text-muted leading-relaxed mb-8 break-words">
               Choose CodIT to gain industry-ready skills through practical, hands-on learning. Our expert mentors provide training in Full Stack Development, UI/UX Design, Mobile App Development, SEO & Growth Marketing, and Data Science & AI. Every course includes real-world projects and personalized guidance to build your confidence. We focus on helping students create strong portfolios and prepare for technical interviews. Start your journey with CodIT and build a successful career in technology.
-
             </p>
             <div className="space-y-7">
               {whyPoints.map((p) => (
-                <div key={p.n} className="flex gap-5">
+                <div key={p.n} className="flex gap-5 min-w-0">
                   <div className="w-10 h-10 shrink-0 rounded-lg border border-green/30 flex items-center justify-center font-mono text-green text-sm">
                     {p.n}
                   </div>
-                  <div>
-                    <h4 className="font-display text-lg text-bone mb-1">{p.title}</h4>
-                    <p className="text-muted text-sm leading-relaxed">{p.desc}</p>
+                  <div className="min-w-0">
+                    <h4 className="font-display text-lg text-bone mb-1 break-words">{p.title}</h4>
+                    <p className="text-muted text-sm leading-relaxed break-words">{p.desc}</p>
                   </div>
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="scene">
-            <div className="code-window bg-[#0A0F0C] border border-line rounded-xl overflow-hidden shadow-2xl">
+          <div className="scene w-full min-w-0">
+            <div className="code-window bg-[#0A0F0C] border border-line rounded-xl overflow-hidden shadow-2xl w-full max-w-full">
               <div className="flex items-center gap-2 px-4 py-3 border-b border-line bg-surface2">
-                <span className="w-2.5 h-2.5 rounded-full bg-[#FF5F56]" />
-                <span className="w-2.5 h-2.5 rounded-full bg-[#FFBD2E]" />
-                <span className="w-2.5 h-2.5 rounded-full bg-[#27C93F]" />
-                <span className="ml-3 font-mono text-xs text-muted">about.ts</span>
+                <span className="w-2.5 h-2.5 rounded-full bg-[#FF5F56] shrink-0" />
+                <span className="w-2.5 h-2.5 rounded-full bg-[#FFBD2E] shrink-0" />
+                <span className="w-2.5 h-2.5 rounded-full bg-[#27C93F] shrink-0" />
+                <span className="ml-3 font-mono text-xs text-muted truncate">about.ts</span>
               </div>
-              <pre className="font-mono text-[12px] sm:text-[13px] leading-relaxed p-5 sm:p-6 overflow-x-auto">
-                <code>
+              <pre className="font-mono text-[12px] sm:text-[13px] leading-relaxed p-5 sm:p-6 overflow-x-auto max-w-full">
+                <code className="whitespace-pre">
                   <span className="text-muted">01</span>{"  "}
                   <span className="text-[#c792ea]">const</span> codIT = {"{"}
                   {"\n"}

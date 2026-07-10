@@ -35,13 +35,95 @@ export default function ContactForm() {
   };
 
   return (
+    // <form
+    //   onSubmit={handleSubmit}
+    //   className="card-3d rounded-2xl border border-line bg-surface p-6 sm:p-8 flex flex-col gap-5"
+    // >
+    //   <div className="grid sm:grid-cols-2 gap-5">
+    //     <div className="flex flex-col gap-2">
+    //       <label htmlFor="name" className="font-mono text-xs text-muted uppercase tracking-widest">
+    //         Name
+    //       </label>
+    //       <input
+    //         id="name"
+    //         required
+    //         value={form.name}
+    //         onChange={update("name")}
+    //         placeholder="Your full name"
+    //         className="bg-ink border border-line focus:border-green outline-none rounded-xl px-4 py-3 text-sm text-bone placeholder:text-muted"
+    //       />
+    //     </div>
+    //     <div className="flex flex-col gap-2">
+    //       <label htmlFor="email" className="font-mono text-xs text-muted uppercase tracking-widest">
+    //         Email
+    //       </label>
+    //       <input
+    //         id="email"
+    //         type="email"
+    //         required
+    //         value={form.email}
+    //         onChange={update("email")}
+    //         placeholder="you@email.com"
+    //         className="bg-ink border border-line focus:border-green outline-none rounded-xl px-4 py-3 text-sm text-bone placeholder:text-muted"
+    //       />
+    //     </div>
+    //   </div>
+
+    //   <div className="flex flex-col gap-2">
+    //     <label htmlFor="phone" className="font-mono text-xs text-muted uppercase tracking-widest">
+    //       Phone
+    //     </label>
+    //     <input
+    //       id="phone"
+    //       type="tel"
+    //       required
+    //       value={form.phone}
+    //       onChange={update("phone")}
+    //       placeholder="+91 98765 43210"
+    //       className="bg-ink border border-line focus:border-green outline-none rounded-xl px-4 py-3 text-sm text-bone placeholder:text-muted"
+    //     />
+    //   </div>
+
+    //   <div className="flex flex-col gap-2">
+    //     <label htmlFor="message" className="font-mono text-xs text-muted uppercase tracking-widest">
+    //       Message
+    //     </label>
+    //     <textarea
+    //       id="message"
+    //       required
+    //       rows={5}
+    //       value={form.message}
+    //       onChange={update("message")}
+    //       placeholder="Tell us what you're looking to learn or build..."
+    //       className="bg-ink border border-line focus:border-green outline-none rounded-xl px-4 py-3 text-sm text-bone placeholder:text-muted resize-none"
+    //     />
+    //   </div>
+
+    //   <button
+    //     type="submit"
+    //     disabled={status === "loading"}
+    //     className="btn-glow self-start bg-green text-ink font-semibold px-7 py-3.5 rounded-full text-sm disabled:opacity-60"
+    //   >
+    //     {status === "loading" ? "Sending..." : "Send Message"}
+    //   </button>
+
+    //   {status === "success" && (
+    //     <p className="font-mono text-xs text-green">✓ {statusMessage}</p>
+    //   )}
+    //   {status === "error" && (
+    //     <p className="font-mono text-xs text-red-400">⚠ {statusMessage}</p>
+    //   )}
+    // </form>
+
+
+
     <form
       onSubmit={handleSubmit}
-      className="card-3d rounded-2xl border border-line bg-surface p-6 sm:p-8 flex flex-col gap-5"
+      className="card-3d rounded-2xl border border-line bg-surface p-4 xs:p-5 sm:p-8 flex flex-col gap-4 xs:gap-5 w-full max-w-full box-border overflow-hidden"
     >
-      <div className="grid sm:grid-cols-2 gap-5">
-        <div className="flex flex-col gap-2">
-          <label htmlFor="name" className="font-mono text-xs text-muted uppercase tracking-widest">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 xs:gap-5 w-full">
+        <div className="flex flex-col gap-1.5 xs:gap-2 min-w-0 w-full">
+          <label htmlFor="name" className="font-mono text-[10px] xs:text-xs text-muted uppercase tracking-widest">
             Name
           </label>
           <input
@@ -50,11 +132,11 @@ export default function ContactForm() {
             value={form.name}
             onChange={update("name")}
             placeholder="Your full name"
-            className="bg-ink border border-line focus:border-green outline-none rounded-xl px-4 py-3 text-sm text-bone placeholder:text-muted"
+            className="w-full box-border bg-ink border border-line focus:border-green outline-none rounded-xl px-3 xs:px-4 py-2.5 xs:py-3 text-xs xs:text-sm text-bone placeholder:text-muted"
           />
         </div>
-        <div className="flex flex-col gap-2">
-          <label htmlFor="email" className="font-mono text-xs text-muted uppercase tracking-widest">
+        <div className="flex flex-col gap-1.5 xs:gap-2 min-w-0 w-full">
+          <label htmlFor="email" className="font-mono text-[10px] xs:text-xs text-muted uppercase tracking-widest">
             Email
           </label>
           <input
@@ -64,13 +146,13 @@ export default function ContactForm() {
             value={form.email}
             onChange={update("email")}
             placeholder="you@email.com"
-            className="bg-ink border border-line focus:border-green outline-none rounded-xl px-4 py-3 text-sm text-bone placeholder:text-muted"
+            className="w-full box-border bg-ink border border-line focus:border-green outline-none rounded-xl px-3 xs:px-4 py-2.5 xs:py-3 text-xs xs:text-sm text-bone placeholder:text-muted"
           />
         </div>
       </div>
 
-      <div className="flex flex-col gap-2">
-        <label htmlFor="phone" className="font-mono text-xs text-muted uppercase tracking-widest">
+      <div className="flex flex-col gap-1.5 xs:gap-2 min-w-0 w-full">
+        <label htmlFor="phone" className="font-mono text-[10px] xs:text-xs text-muted uppercase tracking-widest">
           Phone
         </label>
         <input
@@ -80,12 +162,12 @@ export default function ContactForm() {
           value={form.phone}
           onChange={update("phone")}
           placeholder="+91 98765 43210"
-          className="bg-ink border border-line focus:border-green outline-none rounded-xl px-4 py-3 text-sm text-bone placeholder:text-muted"
+          className="w-full box-border bg-ink border border-line focus:border-green outline-none rounded-xl px-3 xs:px-4 py-2.5 xs:py-3 text-xs xs:text-sm text-bone placeholder:text-muted"
         />
       </div>
 
-      <div className="flex flex-col gap-2">
-        <label htmlFor="message" className="font-mono text-xs text-muted uppercase tracking-widest">
+      <div className="flex flex-col gap-1.5 xs:gap-2 min-w-0 w-full">
+        <label htmlFor="message" className="font-mono text-[10px] xs:text-xs text-muted uppercase tracking-widest">
           Message
         </label>
         <textarea
@@ -95,24 +177,26 @@ export default function ContactForm() {
           value={form.message}
           onChange={update("message")}
           placeholder="Tell us what you're looking to learn or build..."
-          className="bg-ink border border-line focus:border-green outline-none rounded-xl px-4 py-3 text-sm text-bone placeholder:text-muted resize-none"
+          className="w-full box-border bg-ink border border-line focus:border-green outline-none rounded-xl px-3 xs:px-4 py-2.5 xs:py-3 text-xs xs:text-sm text-bone placeholder:text-muted resize-none"
         />
       </div>
 
       <button
         type="submit"
         disabled={status === "loading"}
-        className="btn-glow self-start bg-green text-ink font-semibold px-7 py-3.5 rounded-full text-sm disabled:opacity-60"
+        className="btn-glow w-full sm:w-auto sm:self-start bg-green text-ink font-semibold px-5 xs:px-7 py-3 xs:py-3.5 rounded-full text-xs xs:text-sm disabled:opacity-60"
       >
         {status === "loading" ? "Sending..." : "Send Message"}
       </button>
 
       {status === "success" && (
-        <p className="font-mono text-xs text-green">✓ {statusMessage}</p>
+        <p className="font-mono text-[10px] xs:text-xs text-green break-words">✓ {statusMessage}</p>
       )}
       {status === "error" && (
-        <p className="font-mono text-xs text-red-400">⚠ {statusMessage}</p>
+        <p className="font-mono text-[10px] xs:text-xs text-red-400 break-words">⚠ {statusMessage}</p>
       )}
     </form>
+
+
   );
 }
