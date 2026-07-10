@@ -4,21 +4,21 @@ const reviews = [
       "The Full Stack track gave me an actual product to show, not just a certificate. That portfolio piece got me my first interview.",
     initials: "RM",
     name: "Riya Mehta",
-    track: "Full Stack Track, Batch 11",
+    track: "Full Stack Track",
   },
   {
     quote:
       "Mentor code reviews were the difference. Someone actually explained why my API design was wrong, every single week.",
     initials: "AK",
     name: "Aman Kumar",
-    track: "Backend Track, Batch 12",
+    track: "Backend Track",
   },
   {
     quote:
       "I came in knowing zero design theory. The UI/UX track rebuilt how I think about layout — my Figma files look like a real designer's now.",
     initials: "SP",
     name: "Sana Parveen",
-    track: "UI/UX Track, Batch 13",
+    track: "UI/UX Track",
   },
 ];
 
